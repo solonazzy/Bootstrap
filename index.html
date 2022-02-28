@@ -17,8 +17,26 @@
 </head>
 
 <body>
+    <!--bg-primary is the primary color applied, navbar-expand-sm is the size for small and medium screens-->
+    
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+           <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>            
+        </div>
+    </nav>
     <!--Let us add the class jumbotron to the header class as shown below. This turns the header element into a Bootstrap component named Jumbotron. A jumbotron is used to showcase key content on a website. In this case we are using it to highlight the name of the restaurant.-->
-    <header class="jumbotron">
+    <header class="jumbotron" style="background-color:deepskyblue">
         
         <!--We can use the container class to keep content within a fixed width on the screen, determined by the size of the screen. The alternative is to use the container-fluid class to make the content automatically to span the full width of the screen-->
         <div class="container-fluid">
@@ -75,13 +93,13 @@
     </div>
 
     <footer class="footer">
-        <div >
+        <div style="background-color:deepskyblue">
             <div>             
                 <div class="col-12 col-sm-4 align-self-center">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About us</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
