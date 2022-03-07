@@ -61,6 +61,7 @@
     min-height: 300px;
 }
 
+/*styling our carouselButton in line with the jquery code we have written at the bottom of index.html*/
 #carouselButton {
     right:0px;
     position:absolute;
