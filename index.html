@@ -36,8 +36,10 @@
                 </ul>
                 <!--this was added to include a link to trigger the modal-->
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <!--<a data-toggle="modal" data-target="#loginModal">-->
+                    <!--the above has been replaced with the id below-->
+                    <a id="loginButton">
+                    <span class="fa fa-sign-in"></span>Login</a>
                 </span>
             </div>            
         </div>
@@ -159,7 +161,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="offset-md-2 col-md-10">
-                                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
                                     <button type="submit" class="btn btn-primary btn-sm">Reserve</button>
                                 </div>
                             </div>
@@ -191,9 +193,13 @@
                     <!--<a role="button" class="btn btn-block nav-link btn-warning"
                         data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
                         data-placement="bottom" href="#reservationDiv">Reserve Table</a>-->
-                        <a type="button" class="btn btn-block nav-link btn-warning"
+
+                        <!--commenting out the data-target below for the 4th assignment-->
+                        <!--<a type="button" class="btn btn-block nav-link btn-warning"
                         data-toggle="modal"
-                        data-placement="bottom" data-target="#reserveModal">Reserve Table</a>
+                        data-placement="bottom" data-target="#reserveModal">Reserve Table</a>-->
+                    <a type="button" class="btn btn-warning btn-sm btn-block" id="reserveButton">Reserve Table</a>
+                        
                     
                     <!--the below was commented out to introduce tooltip-->
                         <!--<a type="button" class="btn btn-block btn-warning" 
@@ -479,6 +485,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
     <!--this was introduced to activate the tooltip when ready for rendering-->
     <!--removing the below tooltip function to allow us use or modal form for the reserve button-->
     <!--<script>
@@ -500,7 +507,7 @@
     </script>-->
     
     <!--jquery syntax for the signle button to control the pause and play function-->
-    <script>
+    <!--<script>
         $("#carouselButton").click(function(){
             $('#mycarousel').carousel({interval:1000});
             if ($("#carouselButton").children("span").hasClass('fa-pause')) {
@@ -514,7 +521,17 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
-    </script>
+        /* here i am adding the js for the login modal and reserve modal*/
+        $("#loginButton").click(function(){
+            $("#loginModal").modal('show');
+        });
+        
+        $("#reserveButton").click(function(){
+            $("#reserveModal").modal('show');
+        });
+    
+    </script>-->
+    
 </body>
 
 </html>
